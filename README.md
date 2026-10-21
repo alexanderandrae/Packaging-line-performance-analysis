@@ -29,6 +29,31 @@ and investigate the operational factors
 associated with these service outcomes.
 
 
+### Downtime Analysis
+
+Analysed 179 downtime events totalling
+5,195 minutes across four packaging SKUs.
+
+**Initial findings:**
+
+- Changeovers were the largest downtime
+  contributor (34.3%, 1,782 minutes).
+- Mechanical faults accounted for 20.5%
+  of downtime, averaging 34.3 minutes
+  per event.
+- Cleaning/CIP contributed a further
+  18.5% of lost time.
+- These three categories accounted for
+  73.3% of recorded downtime.
+
+**Next investigation:**
+
+Compare downtime causes within each SKU,
+distinguish planned from unplanned stops,
+and identify the most actionable sources
+of lost packaging time.
+
+
 ### Packaging Performance Analysis (SQL)
 
 Analysed 72 packaging runs across four SKUs
