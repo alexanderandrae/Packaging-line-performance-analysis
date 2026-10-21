@@ -27,3 +27,36 @@ the wholesale order results were:
 The next stage will calculate packaging KPIs
 and investigate the operational factors
 associated with these service outcomes.
+
+
+### Packaging Performance Analysis (SQL)
+
+Analysed 72 packaging runs across four SKUs
+using MySQL aggregations and calculated KPIs.
+
+**Key results:**
+- Total planned output: 12,011 cases
+- Total actual output: 10,023 cases
+- Overall plan attainment: 83.4%
+- Planned-output shortfall: 1,988 cases
+
+**Initial finding:**
+
+Session IPA and Alcohol-Free IPA accounted for
+65.6% of the total planned-output shortfall.
+
+Alcohol-Free IPA had the weakest plan attainment
+(67.1%) and highest average downtime per run
+(117.9 minutes).
+
+**SQL techniques demonstrated:**
+- GROUP BY
+- SUM() and COUNT()
+- AVG()
+- ROUND()
+- NULLIF()
+- Calculated KPI percentages
+
+These findings are based on a synthetic brewery
+operations dataset.
+
