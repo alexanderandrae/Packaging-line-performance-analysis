@@ -98,3 +98,60 @@ SELECT
 FROM downtime_events
 GROUP BY planned_unplanned
 ORDER BY total_minutes DESC;
+
+
+-- ============================================
+-- 6. PLANNED VS UNPLANNED DOWNTIME BY SKU
+-- ============================================
+
+SELECT
+    sku,
+
+    SUM(CASE
+        WHEN planned_unplanned = 'Planned'
+        THEN downtime_minutes
+        ELSE 0
+    END) AS planned_minutes,
+
+    SUM(CASE
+        WHEN planned_unplanned = 'Unplanned'
+        THEN downtime_minutes
+        ELSE 0
+    END) AS unplanned_minutes,
+
+    SUM(downtime_minutes) AS total_minutes,
+
+    ROUND(
+        100.0 * SUM(CASE
+            WHEN planned_unplanned = 'Unplanned'
+            THEN downtime_minutes
+            ELSE 0
+        END) / NULLIF(SUM(downtime_minutes), 0),
+        1
+    ) AS unplanned_pct
+
+FROM downtime_events
+GROUP BY sku
+ORDER BY unplanned_minutes DESC;
+
+
+-- ============================================
+-- 7. DOWNTIME REASON BY PLANNED STATUS
+-- ============================================
+
+SELECT
+    planned_unplanned,
+    downtime_reason,
+    COUNT(*) AS event_count,
+    SUM(downtime_minutes) AS total_minutes
+
+FROM downtime_events
+
+GROUP BY
+    planned_unplanned,
+    downtime_reason
+
+ORDER BY
+    planned_unplanned,
+    total_minutes DESC;
+
