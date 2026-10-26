@@ -46,12 +46,38 @@ Analysed 179 downtime events totalling
 - These three categories accounted for
   73.3% of recorded downtime.
 
-**Next investigation:**
 
-Compare downtime causes within each SKU,
-distinguish planned from unplanned stops,
-and identify the most actionable sources
-of lost packaging time.
+### SKU-Level Downtime Findings
+
+**Session IPA — Largest total downtime burden**
+
+Session IPA contributed 2,133 minutes of downtime,
+representing 41.1% of the brewery's recorded total.
+
+Changeovers accounted for 57.9% of its downtime,
+suggesting production scheduling and batch
+sequencing are priorities for investigation.
+
+**Alcohol-Free IPA — Most disrupted per run**
+
+Alcohol-Free IPA averaged 117.9 minutes of downtime
+per run, the highest of the four products.
+
+Quality holds and label issues together accounted
+for 57.2% of its recorded downtime.
+
+**Planned vs unplanned downtime**
+
+Across all SKUs:
+- Planned downtime: 52.8%
+- Unplanned downtime: 47.2%
+
+Not all planned downtime is avoidable. Further
+analysis will distinguish necessary operational
+activities from opportunities to reduce lost time.
+
+*All findings are based on synthetic operational
+data for a fictional craft brewery.*
 
 
 ### Packaging Performance Analysis (SQL)
